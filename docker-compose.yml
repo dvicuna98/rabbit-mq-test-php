@@ -26,13 +26,15 @@ services:
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-  rabbitmq:
-    image: rabbitmq:3.7-management
-    tty: true
-    ports:
-      - "5672:5672"
-      - "15672:15672"
+#  rabbitmq:
+#    container_name: rabbit-test-container
+#    image: rabbitmq:3.7-management
+#    tty: true
+#    ports:
+#      - "5672:5672"
+#      - "15672:15672"
+
 networks: 
   default: 
     external: 
-      name: external-example 
+      name: information-request-bulk-dispatching-shared-network
